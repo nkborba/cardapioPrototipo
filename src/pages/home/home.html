@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Restaurante do Niko
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+
+  <ion-list>
+
+    <ion-card (click)="abrePratoDia()">
+      <!-- Photo by Vince Rvd from Pexels -->
+      <img src="../../assets/imgs/dia.jpg">
+      <div class="card-title">
+        <span>Prato do dia</span>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="abreLanches()">
+      <img src="../../assets/imgs/hamburguer3.jpg">
+      <div class="card-title">
+        <span>Lanches</span>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="abrePratos()">
+      <img src="../../assets/imgs/principal.jpg">
+      <div class="card-title">
+        <span>Pratos de Entrada e Principais</span>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="abreSobremesas()">
+      <!-- Photo by Donald Chodeva on Unsplash -->
+      <img src="../../assets/imgs/sobremesas.jpg">
+      <div class="card-title">
+        <span>Sobremesas</span>
+      </div>
+    </ion-card>
+
+    <ion-card (click)="abreBebidas()">
+      <!-- Photo by Patrick Fore on Unsplash -->
+      <img src="../../assets/imgs/bebidas2.jpg">
+      <div class="card-title">
+        <span>Bebidas</span>
+      </div>
+    </ion-card>
+
+  </ion-list>
+
+</ion-content>

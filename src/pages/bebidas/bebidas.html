@@ -1,0 +1,165 @@
+<!--
+  Generated template for the BebidasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Bebidas do Niko</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <!-- Card do Suco de Laranja-->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="laranjaClick()">
+          <ion-avatar item-start float-left>
+            <img src="../../assets/imgs/sucoLaranja.jpg">
+          </ion-avatar>
+          <span>Suco de Laranja</span>
+          <ion-badge item-end *ngIf="!laranjaClicked">Ver todas</ion-badge>
+          <ion-badge item-end *ngIf="laranjaClicked">Ver menos</ion-badge>
+        </button>
+        <ion-card-content *ngIf="laranjaClicked">
+          <ion-item>
+            <ion-icon name="custom-suco" item-start></ion-icon>
+            <span>350ml</span>
+            <ion-badge item-end>R$ 7,00</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="custom-suco" item-start></ion-icon>
+            <span>600ml</span>
+            <ion-badge item-end>R$ 12,00</ion-badge>
+          </ion-item>
+        </ion-card-content>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Suco de Morango -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="morangoClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by rawpixel.com from Pexels -->
+            <img src="../../assets/imgs/sucoMorango2.jpg">
+          </ion-avatar>
+          <span>Suco de Morango</span>
+          <ion-badge item-end *ngIf="!morangoClicked">Ver todas</ion-badge>
+          <ion-badge item-end *ngIf="morangoClicked">Ver menos</ion-badge>
+        </button>
+        <ion-card-content *ngIf="morangoClicked">
+          <ion-item>
+            <ion-icon name="custom-suco" item-start></ion-icon>
+            <span>350ml</span>
+            <ion-badge item-end>R$ 7,00</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="custom-suco" item-start></ion-icon>
+            <span>700ml</span>
+            <ion-badge item-end>R$ 12,00</ion-badge>
+          </ion-item>
+        </ion-card-content>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card da Coca Cola -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="cocaClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by rawpixel.com from Pexels -->
+            <img src="../../assets/imgs/cocaCola.jpg">
+          </ion-avatar>
+          <span>Coca-Cola</span>
+          <ion-badge item-end *ngIf="!cocaClicked">Ver todas</ion-badge>
+          <ion-badge item-end *ngIf="cocaClicked">Ver menos</ion-badge>
+        </button>
+      </ion-list>
+      <ion-card-content *ngIf="cocaClicked">
+        <ion-item>
+          <ion-icon name="custom-refri" item-start></ion-icon>
+          <span>Lata 350ml</span>
+          <ion-badge item-end>R$ 7,00</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="custom-coca" item-start></ion-icon>
+          <span>Copo 500ml</span>
+          <ion-badge item-end>R$ 12,00</ion-badge>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Card das Fantas -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="fantaClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by Colin Schmitt from Pexels -->
+            <img src="../../assets/imgs/fantaLaranja.jpg">
+          </ion-avatar>
+          <span>Fanta 350ml</span>
+          <ion-badge item-end *ngIf="!fantaClicked">Ver todas</ion-badge>
+          <ion-badge item-end *ngIf="fantaClicked">Ver menos</ion-badge>
+        </button>
+        <ion-card-content *ngIf="fantaClicked">
+          <ion-item>
+            <ion-icon name="custom-refri" item-start></ion-icon>
+            <span>Fanta laranja</span>
+            <ion-badge item-end>R$ 7,00</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="custom-refri" item-start></ion-icon>
+            <span>Fanta uva</span>
+            <ion-badge item-end>R$ 7,00</ion-badge>
+          </ion-item>
+        </ion-card-content>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Chopp -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="choppClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by rawpixel.com from Pexels -->
+            <img src="../../assets/imgs/cerveja.jpg">
+          </ion-avatar>
+
+          <span>Chopp Heineken</span>
+          <ion-badge item-end *ngIf="!choppClicked">Ver todas</ion-badge>
+          <ion-badge item-end *ngIf="choppClicked">Ver menos</ion-badge>
+        </button>
+
+        <ion-card-content *ngIf="choppClicked">
+
+          <ion-item *ngIf="choppClicked">
+            <ion-icon name="beer" item-start></ion-icon>
+            <span>500ml</span>
+            <ion-badge item-end>R$ 12,00</ion-badge>
+          </ion-item>
+
+          <ion-item *ngIf="choppClicked">
+            <ion-icon name="beer" item-start></ion-icon>
+            <span>Chopp Refil</span>
+            <ion-badge item-end>R$ 23,00</ion-badge>
+          </ion-item>
+
+        </ion-card-content>
+      </ion-list>
+    </ion-card>
+
+  </ion-list>
+
+  <!-- FAB oculta tudo -->
+  <ion-fab left bottom *ngIf="algumClick">
+    <button ion-fab color="primary" (click)="ocultaTudo()">
+      <ion-icon name="eye-off"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

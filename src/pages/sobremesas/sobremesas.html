@@ -1,0 +1,146 @@
+<!--
+  Generated template for the SobremesasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Sobremesas do Niko</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <!-- Card do Petit Gateau-->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="petitClick()">
+          <ion-avatar item-start float-left>
+            <img src="../../assets/imgs/sobremesas/petitGateau.jpg">
+          </ion-avatar>
+          <span>Petit Gateau</span>
+          <ion-badge item-end *ngIf="!petitClicked">{{precoPetit}}</ion-badge>
+          <ion-badge item-end *ngIf="petitClicked">-</ion-badge>
+        </button>
+        <div *ngIf="petitClicked">
+          <img src="../../assets/imgs/sobremesas/petitGateau.jpg">
+          <ion-card-content>
+            <span>Petit Gateau</span>
+            <p>Bolinho de chocolate com recheio quente acompanhado por sorvete de creme.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoPetit}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card Torta de Café -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="tortaCafeClick()">
+          <ion-avatar item-start float-left>
+            <img src="../../assets/imgs/sobremesas/tortaDeCafe.jpg">
+          </ion-avatar>
+          <span>Torta de chocolate com café</span>
+          <ion-badge item-end *ngIf="!tortaCafeClicked">{{precoTortaCafe}}</ion-badge>
+          <ion-badge item-end *ngIf="tortaCafeClicked">-</ion-badge>
+        </button>
+        <div *ngIf="tortaCafeClicked">
+          <img src="../../assets/imgs/sobremesas/tortaDeCafe.jpg">
+          <ion-card-content>
+            <span>Torta de chocolate com café</span>
+            <p>Uma torta gorumet de chocolate com nuances de café.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoTortaCafe}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Cupcake -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="cupcakeClick()">
+          <ion-avatar item-start float-left>
+            <img src="../../assets/imgs/sobremesas/cupcake.jpg">
+          </ion-avatar>
+          <span>Cupcake de Frutas Vermelhas</span>
+          <ion-badge item-end *ngIf="!cupcakeClicked">{{precoCupcake}}</ion-badge>
+          <ion-badge item-end *ngIf="cupcakeClicked">-</ion-badge>
+        </button>
+        <div *ngIf="cupcakeClicked">
+          <img src="../../assets/imgs/sobremesas/cupcake.jpg">
+          <ion-card-content>
+            <span>Cupcake de Frutas Vermelhas</span>
+            <p>Uma sobremesa simples, rápida, que pode ser facilmente levada para viagem, para aqueles que querem
+              lembrar da sensação de estar aqui neste restaurante.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoCupcake}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Banana Split -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="bananaClick()">
+          <ion-avatar item-start float-left>
+            <img src="../../assets/imgs/sobremesas/bananaSplit.jpg">
+          </ion-avatar>
+          <span>Banana Split</span>
+          <ion-badge item-end *ngIf="!bananaClicked">{{precoBanana}}</ion-badge>
+          <ion-badge item-end *ngIf="bananaClicked">-</ion-badge>
+        </button>
+        <div *ngIf="bananaClicked">
+          <img src="../../assets/imgs/sobremesas/bananaSplit.jpg">
+          <ion-card-content>
+            <span>Banana Split</span>
+            <p>Sinta-se um colegial dos anos 80 com essa sobremesa que saiu diretamente dos tempos da brilhantina.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoBanana}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card da Panqueca Doce -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="panquecaClick()">
+          <ion-avatar item-start float-left>
+            <img src="../../assets/imgs/sobremesas/panquecaDoce.jpg">
+          </ion-avatar>
+          <span>Panqueca Doce</span>
+          <ion-badge item-end *ngIf="!panquecaClicked">{{precoPanqueca}}</ion-badge>
+          <ion-badge item-end *ngIf="panquecaClicked">-</ion-badge>
+        </button>
+        <div *ngIf="panquecaClicked">
+          <img src="../../assets/imgs/sobremesas/panquecaDoce.jpg">
+          <ion-card-content>
+            <span>Panqueca Doce</span>
+            <p>Sempre quis comer aquelas panquecas com geleia de morango que aparece nos filmes, aproveite.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoPanqueca}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+  </ion-list>
+
+  <!-- FAB oculta tudo -->
+  <ion-fab left bottom *ngIf="temExpandido">
+    <button ion-fab color="primary" (click)="ocultaTudo()">
+      <ion-icon name="eye-off"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

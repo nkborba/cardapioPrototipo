@@ -1,0 +1,149 @@
+<!--
+  Generated template for the PratosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Pratos do Niko</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <!-- Card da Salada Caesar-->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="saladaCaesarClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by Valeria Boltneva from Pexels -->
+            <img src="../../assets/imgs/principais/salada.jpg">
+          </ion-avatar>
+          <span>Salada Caesar</span>
+          <ion-badge item-end *ngIf="!saladaCaesarClicked">{{precoSalada}}</ion-badge>
+          <ion-badge item-end *ngIf="saladaCaesarClicked">-</ion-badge>
+        </button>
+        <div *ngIf="saladaCaesarClicked">
+          <img src="../../assets/imgs/principais/salada.jpg">
+          <ion-card-content>
+            <span>Salada Caesar</span>
+            <p>Um hamburger clássico, com alface, tomate, bacon, queijo cheddar, hamburguer e maionese.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoSalada}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Sopa de Batata -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="sopaDeBatataClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by Valeria Boltneva from Pexels -->
+            <img src="../../assets/imgs/principais/sopa.jpg">
+          </ion-avatar>
+          <span>Sopa de batata</span>
+          <ion-badge item-end *ngIf="!sopaBatataClicked">{{precoSopa}}</ion-badge>
+          <ion-badge item-end *ngIf="sopaBatataClicked">-</ion-badge>
+        </button>
+        <div *ngIf="sopaBatataClicked">
+          <img src="../../assets/imgs/principais/sopa.jpg">
+          <ion-card-content>
+            <span>Sopa de batata</span>
+            <p>Três pequenas combuquinhas de uma deliciosa sopa de batata com queijo para abrir seu apetite.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{precoSopa}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Costela 12 -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="costela12Click()">
+          <ion-avatar item-start float-left>
+            <!-- Image by PublicDomainPictures from Pixabay  -->
+            <img src="../../assets/imgs/principais/costela12.jpg">
+          </ion-avatar>
+          <span>Costela 12 ripas</span>
+          <ion-badge item-end *ngIf="!constela12Clicked">{{costela12}}</ion-badge>
+          <ion-badge item-end *ngIf="constela12Clicked">-</ion-badge>
+        </button>
+        <div *ngIf="constela12Clicked">
+          <img src="../../assets/imgs/principais/costela12.jpg">
+          <ion-card-content>
+            <span>Costela 12 ripas</span>
+            <p>Suculenta costela de 12 ripas, perfeita para dividir.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{costela12}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Costela 6 -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="costela6Click()">
+          <ion-avatar item-start float-left>
+            <!-- Image by PublicDomainPictures from Pixabay  -->
+            <img src="../../assets/imgs/principais/costela6.jpg">
+          </ion-avatar>
+          <span>Costela 6 ripas</span>
+          <ion-badge item-end *ngIf="!costela6Clicked">{{costela6}}</ion-badge>
+          <ion-badge item-end *ngIf="costela6Clicked">-</ion-badge>
+        </button>
+        <div *ngIf="costela6Clicked">
+          <img src="../../assets/imgs/principais/costela6.jpg">
+          <ion-card-content>
+            <span>Costela 6 ripas</span>
+            <p>Suculenta costela de 6 ripas, perfeita para um prato individual.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{costela6}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do Risoto -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="risotoCamaraoClick()">
+          <ion-avatar item-start float-left>
+            <!-- Image by PublicDomainPictures from Pixabay  -->
+            <img src="../../assets/imgs/principais/risotoCamarao.jpg">
+          </ion-avatar>
+          <span>Risoto de camarão</span>
+          <ion-badge item-end *ngIf="!risotoCamaraoClicked">{{risotoCamarao}}</ion-badge>
+          <ion-badge item-end *ngIf="risotoCamaraoClicked">-</ion-badge>
+        </button>
+        <div *ngIf="risotoCamaraoClicked">
+          <img src="../../assets/imgs/principais/risotoCamarao.jpg">
+          <ion-card-content>
+            <span>Risoto de camarão</span>
+            <p>Delicioso risto de Camarão, cremoso e com os melhores ingredientes.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{risotoCamarao}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+  </ion-list>
+
+  <!-- FAB oculta tudo -->
+  <ion-fab left bottom *ngIf="temExpandido">
+    <button ion-fab color="primary" (click)="ocultaTudo()">
+      <ion-icon name="eye-off"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

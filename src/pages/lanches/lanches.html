@@ -1,0 +1,151 @@
+<!--
+  Generated template for the LanchesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Lanches do Niko</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <!-- Card do Burger Classico-->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="classicoClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by Valeria Boltneva from Pexels -->
+            <img src="../../assets/imgs/lanches/burger1.jpg">
+          </ion-avatar>
+          <span>Classic Burger</span>
+          <ion-badge item-end *ngIf="!hambClassico">{{classicPreco}}</ion-badge>
+          <ion-badge item-end *ngIf="hambClassico">-</ion-badge>
+        </button>
+        <div *ngIf="hambClassico">
+          <img src="../../assets/imgs/lanches/burger1.jpg">
+          <ion-card-content>
+            <span>Classic Burger</span>
+            <p>Um hamburger clássico, com alface, tomate, bacon, queijo cheddar, hamburguer e maionese.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{classicPreco}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do X-Burger -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="chessClick()">
+          <ion-avatar item-start float-left>
+            <!-- Photo by Valeria Boltneva from Pexels -->
+            <img src="../../assets/imgs/lanches/burger2.jpg">
+          </ion-avatar>
+          <span>X-Burger</span>
+          <ion-badge item-end *ngIf="!hambChess">{{chessPreco}}</ion-badge>
+          <ion-badge item-end *ngIf="hambChess">-</ion-badge>
+        </button>
+        <div *ngIf="hambChess">
+          <img src="../../assets/imgs/lanches/burger2.jpg">
+          <ion-card-content>
+            <span>X-Burger</span>
+            <p>Sabores simples e bem destacados, pão, queijo prato, e 2 hamburguers.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{chessPreco}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do HotDog Americano -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="hotdogAmClick()">
+          <ion-avatar item-start float-left>
+            <!-- Image by PublicDomainPictures from Pixabay  -->
+            <img src="../../assets/imgs/lanches/hotdogAmerican.jpg">
+          </ion-avatar>
+          <span>American HotDog</span>
+          <ion-badge item-end *ngIf="!hotdogAm">{{hotdogAmPreco}}</ion-badge>
+          <ion-badge item-end *ngIf="hotdogAm">-</ion-badge>
+        </button>
+        <div *ngIf="hotdogAm">
+          <img src="../../assets/imgs/lanches/hotdogAmerican.jpg">
+          <ion-card-content>
+            <span>American HotDog</span>
+            <p>Um cachorro quente estilo americano, simples, um pão de cachorro quente, salsicha, ketchup e mostarda.
+            </p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{hotdogAmPreco}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do HotDog Americano -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="hotdogBrClick()">
+          <ion-avatar item-start float-left>
+            <!-- Image by PublicDomainPictures from Pixabay  -->
+            <img src="../../assets/imgs/lanches/hotdogBrasil.jpg">
+          </ion-avatar>
+          <span>Dogão Brasil</span>
+          <ion-badge item-end *ngIf="!hotdogBr">{{hotdogBrPreco}}</ion-badge>
+          <ion-badge item-end *ngIf="hotdogBr">-</ion-badge>
+        </button>
+        <div *ngIf="hotdogBr">
+          <img src="../../assets/imgs/lanches/hotdogBrasil.jpg">
+          <ion-card-content>
+            <span>Dogão Brasil</span>
+            <p>Um cachorro quente no estilo Brasileiro, recheado e saboroso, pão de cachorro quente, 2 salsichas, pure,
+              milho, ketchup, mostarda e batata palha.</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{hotdogBrPreco}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+    <!-- Card do HotDog Americano -->
+    <ion-card full>
+      <ion-list>
+        <button ion-item (click)="vegetarianoClick()">
+          <ion-avatar item-start float-left>
+            <!-- Image by PublicDomainPictures from Pixabay  -->
+            <img src="../../assets/imgs/lanches/lancheVegetariano.jpg">
+          </ion-avatar>
+          <span>Lanche vegetariano</span>
+          <ion-badge item-end *ngIf="!lancheVegeta">{{hotdogBrPreco}}</ion-badge>
+          <ion-badge item-end *ngIf="lancheVegeta">-</ion-badge>
+        </button>
+        <div *ngIf="lancheVegeta">
+          <img src="../../assets/imgs/lanches/lancheVegetariano.jpg">
+          <ion-card-content>
+            <span>Lanche vegetariano</span>
+            <p>Lanche para os vegetarianos não ficarem de fora do role. Pão, queijo, tomate, hamburguer de soja, .</p>
+          </ion-card-content>
+          <ion-item>
+            <ion-badge item-end>{{hotdogBrPreco}}</ion-badge>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card>
+
+  </ion-list>
+
+  <!-- FAB oculta tudo -->
+  <ion-fab left bottom *ngIf="temExpandido">
+    <button ion-fab color="primary" (click)="ocultaTudo()">
+      <ion-icon name="eye-off"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
