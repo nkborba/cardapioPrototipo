@@ -1,5 +1,7 @@
 {
   "name": "integrador",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
